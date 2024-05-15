@@ -14,8 +14,8 @@ int main(int _argc, char **_argv)
     // struct dorm_t *dorms = malloc(size * sizeof(struct dorm_t));
     // int sizee = 0;
     // struct student_t *students = malloc(sizee * sizeof(struct student_t));
-    struct student_t *students = malloc(120 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(120 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(9999 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(9999 * sizeof(struct dorm_t));
     char data[75];
     char id[12];
     char name[25];
@@ -82,9 +82,7 @@ int main(int _argc, char **_argv)
                 dorms[j] = create_dorm(name, capacity, GENDER_MALE);
             }
             ++j;
-            
         }
-        
 
         else if(strcmp(data, "assign-student")==0)
         {
@@ -95,6 +93,7 @@ int main(int _argc, char **_argv)
             if(strcmp(students[i].id, id)==0)
             {
                 strcpy(students[i].asrama, name);
+                
             }
             else
             {
