@@ -16,7 +16,7 @@ int main(int _argc, char **_argv)
     char name[25];
     char year[5];
     const char div[2] = "#";
-    char dname[25];
+    char dname[20];
     char *token;
     char aid[15];
     char adorm[15];
@@ -134,8 +134,8 @@ int main(int _argc, char **_argv)
         
     } while (1==1);
 
-    free(students);
-    free(dorms);
+    // free(students);
+    // free(dorms);
 
     return 0;
 }
