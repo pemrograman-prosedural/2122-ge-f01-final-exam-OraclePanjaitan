@@ -105,13 +105,13 @@ int main(int _argc, char **_argv)
                 }
                 
             }
-            
+            free(students);
+            free(dorms); 
         }
-        
+    
     }
 
-    free(students);
-    free(dorms);
+    
 
     return 0;
 }
