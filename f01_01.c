@@ -14,8 +14,8 @@ int main(int _argc, char **_argv)
     // struct dorm_t *dorms = malloc(size * sizeof(struct dorm_t));
     // int sizee = 0;
     // struct student_t *students = malloc(sizee * sizeof(struct student_t));
-    struct student_t *students = malloc(67 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(25 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(67 ** sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(25 ** sizeof(struct dorm_t));
     char data[75];
     char id[12];
     char name[25];
