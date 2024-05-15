@@ -45,7 +45,7 @@ void print_student(struct student_t *_students, int size)
 
 void print_studs(struct student_t *_students, int size)
 {
-
+    printf("\t");
   for (int j = 0; j < size-3; j++)
     {
         if(_students[j].gender == 1)
