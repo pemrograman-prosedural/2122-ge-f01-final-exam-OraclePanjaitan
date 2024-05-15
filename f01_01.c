@@ -9,15 +9,14 @@
 
 int main(int _argc, char **_argv) 
 {
-    struct student_t *students = malloc(12 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(12 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(150 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(150 * sizeof(struct dorm_t));
     char data[100];
     char id[12];
     char name[40];
     char year[5];
     const char div[2] = "#";
     char dname[40];
-    // unsigned short capacity;
     char *token;
     char aid[40];
     char adorm[40];
@@ -53,7 +52,7 @@ int main(int _argc, char **_argv)
         }
         else if (strcmp(token, "student-add")== 0)
         {
-            // token = strtok(data, div);
+            
             token = strtok(NULL, div);
             strcpy(id, token);
             strcpy(arrayId, token);
@@ -107,8 +106,6 @@ int main(int _argc, char **_argv)
             strcpy(aid, token);
             token = strtok(NULL, div);
             strcpy(adorm, token);
-            // printf("%s\n", students[0].id);
-            // printf("%s\n",aid);
             if(strcmp(students[i].id, aid)==0)
             {
                 strcpy(students[i].asrama, adorm);
