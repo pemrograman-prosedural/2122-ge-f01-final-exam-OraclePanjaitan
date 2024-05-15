@@ -24,14 +24,9 @@ int main(int _argc, char **_argv)
     char arrayId[255];
     int j = 0;
     int n = 0;
-    int k = 0;
     int i = 0;
-    int a,b,c,d,e,f,g = 0;
     char left[40];
-    char dleft[40];
-
-
-
+    
     do
     {
         data[0] = '\0';
@@ -138,7 +133,6 @@ int main(int _argc, char **_argv)
                 
             }
             
-            // n++;
         }
         
     } while (1==1);
