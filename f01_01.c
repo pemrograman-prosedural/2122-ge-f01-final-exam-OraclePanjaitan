@@ -17,7 +17,6 @@ int main(int _argc, char **_argv)
     char id[12];
     char name[25];
     char year[5];
-    const char div[2] = "#";
     char dname[20];
     char *token;
     char aid[15];
@@ -47,7 +46,7 @@ int main(int _argc, char **_argv)
             data[++k] = '\0';
         }
 
-        token = strtok(data, div);
+        token = strtok(data, "#");
         if(strcmp(token, "---")==0)
         {
             break;
@@ -56,14 +55,14 @@ int main(int _argc, char **_argv)
         {
             student_size++;
             students = realloc(students, student_size * sizeof(struct student_t));
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(id, token);
             strcpy(arrayId, token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(name, token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(year, token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             if (strcmp(token, "female")==0)
             {
                 students[j] = create_student(id, name, year, GENDER_FEMALE);
@@ -83,11 +82,11 @@ int main(int _argc, char **_argv)
         {
             dorm_size++;
             dorms = realloc(dorms, dorm_size * sizeof(struct dorm_t));
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(dname, token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             unsigned short capacity = atoi(token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             if (strcmp(token, "female")==0)
             {
                 dorms[j] = create_dorm(dname, capacity, GENDER_FEMALE);
@@ -107,9 +106,9 @@ int main(int _argc, char **_argv)
 
         else if(strcmp(data, "assign-student")==0)
         {
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(aid, token);
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(adorm, token);
             if(strcmp(students[i].id, aid)==0)
             {
@@ -123,7 +122,7 @@ int main(int _argc, char **_argv)
         }
         else if(strcmp(data, "student-leave")==0)
         {
-            token = strtok(NULL, div);
+            token = strtok(NULL, "#");
             strcpy(left, token);
            
             for(n = 0; n<j;n++)
