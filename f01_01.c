@@ -7,7 +7,7 @@
 #include "./libs/dorm.h"
 #include "./libs/student.h"
 
-int main(int _argc, char **_argv)
+int main(int _argc, char **_argv) 
 {
     struct student_t *students = malloc(12 * sizeof(struct student_t));
     struct dorm_t *dorms = malloc(12 * sizeof(struct dorm_t));
