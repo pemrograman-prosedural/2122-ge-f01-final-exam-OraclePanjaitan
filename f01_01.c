@@ -9,9 +9,14 @@
 
 int main(int _argc, char **_argv) 
 {
-    struct student_t *students = malloc(50 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(25 * sizeof(struct dorm_t));
-    char data[100];
+
+    // int size = 0;
+    // struct dorm_t *dorms = malloc(size * sizeof(struct dorm_t));
+    // int sizee = 0;
+    // struct student_t *students = malloc(sizee * sizeof(struct student_t));
+    struct student_t *students = malloc(120 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(120 * sizeof(struct dorm_t));
+    char data[75];
     char id[12];
     char name[25];
     char year[5];
@@ -24,7 +29,8 @@ int main(int _argc, char **_argv)
 
     while(1==1)
     {
-        fgets(data,100,stdin);
+        fflush(stdin);
+        fgets(data,75,stdin);
         data[strlen(data) -1] = '\0';
 
         token = strtok(data, "#");
@@ -34,6 +40,8 @@ int main(int _argc, char **_argv)
         }
         else if (strcmp(token, "student-add")== 0)
         {
+            // sizee++;
+            // students = realloc(students, sizee * sizeof(struct student_t));
             token = strtok(NULL, "#");
             strcpy(id, token);
             token = strtok(NULL, "#");
@@ -58,6 +66,8 @@ int main(int _argc, char **_argv)
 
         else if(strcmp(data, "dorm-add")==0)
         {
+            // size++;
+            // dorms = realloc(dorms, size * sizeof(struct dorm_t));
             token = strtok(NULL, "#");
             strcpy(name, token);
             token = strtok(NULL, "#");
@@ -105,14 +115,13 @@ int main(int _argc, char **_argv)
                 }
                 
             }
-            free(students);
-            free(dorms); 
+            
         }
     
     }
 
-    
-
+    free(students);
+    free(dorms);
     return 0;
 }
 
