@@ -9,12 +9,10 @@
 
 int main(int _argc, char **_argv) 
 {
+    struct student_t *students = malloc(40 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(40 * sizeof(struct dorm_t));
     int student_size = 0;
-    int dorm_size = 0;
-    struct student_t *students = NULL;
-    struct dorm_t *dorms = NULL;
-    students = malloc(student_size * sizeof(struct student_t));
-    dorms = malloc(dorm_size * sizeof(struct dorm_t));
+    int dorm_size =0;
     char data[100];
     char id[12];
     char name[25];
@@ -56,7 +54,8 @@ int main(int _argc, char **_argv)
         }
         else if (strcmp(token, "student-add")== 0)
         {
-            
+            student_size++;
+            students = realloc(students, student_size * sizeof(struct student_t));
             token = strtok(NULL, div);
             strcpy(id, token);
             strcpy(arrayId, token);
@@ -82,6 +81,8 @@ int main(int _argc, char **_argv)
 
         else if(strcmp(data, "dorm-add")==0)
         {
+            dorm_size++;
+            dorms = realloc(dorms, dorm_size * sizeof(struct dorm_t));
             token = strtok(NULL, div);
             strcpy(dname, token);
             token = strtok(NULL, div);
@@ -138,8 +139,8 @@ int main(int _argc, char **_argv)
         
     } while (1==1);
 
-    // free(students);
-    // free(dorms);
+    free(students);
+    free(dorms);
 
     return 0;
 }
