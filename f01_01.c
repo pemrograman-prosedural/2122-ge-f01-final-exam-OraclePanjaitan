@@ -137,7 +137,7 @@ int main(int _argc, char **_argv)
             
         }
         
-    } while (1==1);
+    } while (1);
 
     free(students);
     free(dorms);
