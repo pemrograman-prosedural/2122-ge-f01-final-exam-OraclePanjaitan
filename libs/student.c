@@ -21,31 +21,8 @@ struct student_t create_student(char *_id, char *_name, char *_year,enum gender_
   return std;
 }
 
-void print_student(struct student_t *_students, int size)
-{
-
-  for (int j = 0; j < size; j++)
-    {
-        if(_students[j].gender == 1)
-        {
-            printf("%s|%s|%s|female\n", _students[j].id, _students[j].name, _students[j].year);
-        }
-        else
-        {
-            printf("%s|%s|%s|male\n", _students[j].id, _students[j].name, _students[j].year);
-        }
-    }
-}
-
-// void assign_studs(struct student_t *_students, struct dorm_t *dorm, s);
-// {
-//     for
-// }
-
-
 void print_studs(struct student_t *_students, int size)
 {
-    printf("\t");
   for (int j = 0; j < size-3; j++)
     {
         if(_students[j].gender == 1)

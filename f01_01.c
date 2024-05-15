@@ -9,22 +9,22 @@
 
 int main(int _argc, char **_argv) 
 {
-    struct student_t *students = malloc(150 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(150 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(120 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(120 * sizeof(struct dorm_t));
     char data[100];
     char id[12];
-    char name[40];
+    char name[25];
     char year[5];
     const char div[2] = "#";
-    char dname[40];
+    char dname[25];
     char *token;
-    char aid[40];
-    char adorm[40];
-    char arrayId[255];
+    char aid[15];
+    char adorm[15];
+    char arrayId[25];
     int j = 0;
     int n = 0;
     int i = 0;
-    char left[40];
+    char left[10];
     
     do
     {

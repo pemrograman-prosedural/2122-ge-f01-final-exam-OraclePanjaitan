@@ -22,7 +22,6 @@ struct student_t
 
 struct student_t create_student(char *_id, char *_name, char *_year,
                                 enum gender_t _gender);
-void print_student(struct student_t *_students, int size);
 void print_studs(struct student_t *_students, int size);
 void assign_studs(struct student_t *_students, struct dorm_t *dorm);
 
