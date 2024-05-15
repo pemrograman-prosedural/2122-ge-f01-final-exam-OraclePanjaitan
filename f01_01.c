@@ -9,8 +9,8 @@
 
 int main(int _argc, char **_argv) 
 {
-    struct student_t *students = malloc(25 * sizeof(struct student_t));
-    struct dorm_t *dorms = malloc(12 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(100 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc(100 * sizeof(struct dorm_t));
     int student_size = 0;
     int dorm_size =0;
     char data[100];
