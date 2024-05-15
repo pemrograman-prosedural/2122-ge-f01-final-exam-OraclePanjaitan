@@ -13,7 +13,7 @@ int main(int _argc, char **_argv)
     struct dorm_t *dorms = malloc(1200 * sizeof(struct dorm_t));
     int student_size = 0;
     int dorm_size =0;
-    char data[50];
+    char data[100];
     char id[12];
     char name[25];
     char year[5];
@@ -27,24 +27,27 @@ int main(int _argc, char **_argv)
     int i = 0;
     char left[10];
     
+
     do
     {
-        data[0] = '\0';
-        int k = 0;
-        while (1==1)
-        {
-            char i = getchar();
-            if (i == '\n')
-            {
-                break;
-            }
-            if (i == '\r')
-            {
-                continue;
-            }
-            data[k] = i;
-            data[++k] = '\0';
-        }
+        // data[0] = '\0';
+        // int k = 0;
+        // while (1==1)
+        // {
+        //     fgets(data, 100, stdin);
+            
+        //     if (i == '\n')
+        //     {
+        //         break;
+        //     }
+        //     if (i == '\r')
+        //     {
+        //         continue;
+        //     }
+         
+        // }
+        fgets(data,100,stdin);
+        data[strlen(data) -1] = '\0';
 
         token = strtok(data, "#");
         if(strcmp(token, "---")==0)
