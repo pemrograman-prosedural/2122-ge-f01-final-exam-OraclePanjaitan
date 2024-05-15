@@ -19,7 +19,6 @@ int main(int _argc, char **_argv)
     char *token;
     char aid[15];
     char adorm[15];
-    char arrayId[25];
     int j = 0;
     int n = 0;
     int i = 0;
@@ -40,7 +39,6 @@ int main(int _argc, char **_argv)
         {
             token = strtok(NULL, "#");
             strcpy(id, token);
-            strcpy(arrayId, token);
             token = strtok(NULL, "#");
             strcpy(name, token);
             token = strtok(NULL, "#");
