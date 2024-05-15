@@ -26,7 +26,7 @@ int main(int _argc, char **_argv)
     char left[10];
     
 
-    do
+    while(1==1)
     {
         fgets(data,100,stdin);
         data[strlen(data) -1] = '\0';
@@ -117,7 +117,7 @@ int main(int _argc, char **_argv)
             
         }
         
-    } while (1==1);
+    }
 
     free(students);
     free(dorms);
