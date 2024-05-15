@@ -15,10 +15,7 @@ int main(int _argc, char **_argv)
     char id[12];
     char name[25];
     char year[5];
-    char dname[20];
     char *token;
-    char aid[15];
-    char adorm[15];
     int j = 0;
     int n = 0;
     int i = 0;
@@ -62,36 +59,32 @@ int main(int _argc, char **_argv)
         else if(strcmp(data, "dorm-add")==0)
         {
             token = strtok(NULL, "#");
-            strcpy(dname, token);
+            strcpy(name, token);
             token = strtok(NULL, "#");
             unsigned short capacity = atoi(token);
             token = strtok(NULL, "#");
             if (strcmp(token, "female")==0)
             {
-                dorms[j] = create_dorm(dname, capacity, GENDER_FEMALE);
+                dorms[j] = create_dorm(name, capacity, GENDER_FEMALE);
             } 
             else if (strcmp(token, "male")==0)
             {
-                dorms[j] = create_dorm(dname, capacity, GENDER_MALE);
+                dorms[j] = create_dorm(name, capacity, GENDER_MALE);
             }
             ++j;
             
-        }
-        else if(strcmp(data, "dorm-print-all-detail")==0)
-        {
-            print_dorm(dorms,j);
         }
         
 
         else if(strcmp(data, "assign-student")==0)
         {
             token = strtok(NULL, "#");
-            strcpy(aid, token);
+            strcpy(id, token);
             token = strtok(NULL, "#");
-            strcpy(adorm, token);
-            if(strcmp(students[i].id, aid)==0)
+            strcpy(name, token);
+            if(strcmp(students[i].id, id)==0)
             {
-                strcpy(students[i].asrama, adorm);
+                strcpy(students[i].asrama, name);
             }
             else
             {

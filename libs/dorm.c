@@ -18,20 +18,3 @@ struct dorm_t create_dorm(char *_name, unsigned short _capacity, enum gender_t _
     dorm_.residents_num = 0;    
     return dorm_; 
 }
-
-void print_dorm(struct dorm_t *_dorm, int size)
-{
-    for(int i = 0; i<size ;i++)
-    {
-        if(_dorm[i].gender == 1)
-        {
-            printf("%s|%d|female|%d\n",  _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);            
-        }
-        if(_dorm[i].gender == 0)
-        {
-            printf("%s|%d|male|%d\n",  _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);            
-        }
-
-
-    }
-}
