@@ -13,7 +13,7 @@ int main(int _argc, char **_argv)
     struct dorm_t *dorms = malloc(1200 * sizeof(struct dorm_t));
     int student_size = 0;
     int dorm_size =0;
-    char data[100];
+    char data[50];
     char id[12];
     char name[25];
     char year[5];
